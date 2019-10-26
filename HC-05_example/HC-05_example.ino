@@ -1,7 +1,10 @@
+/**
+ * HC-05 Read and Send message example
+ */
 #include <SoftwareSerial.h>
 
-const int BLUETOOTH_RX_PIN = 8;
-const int BLUETOOTH_TX_PIN = 9;
+const int BLUETOOTH_RX_PIN = 8; // HC-05 傳送 PIN
+const int BLUETOOTH_TX_PIN = 9; // HC-05 接收 PIN
 const int BLUETOOTH_STATEL_PIN = 10;
 
 SoftwareSerial BT(BLUETOOTH_RX_PIN, BLUETOOTH_TX_PIN); // 接收腳, 傳送腳

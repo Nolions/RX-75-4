@@ -20,9 +20,11 @@ void setup() {
 
 void loop() {
   // 取得並印出溫度
-  Serial.print("目標溫度:");
-  Serial.print(kTypeTemp());
-  Serial.print("°C");
+  Serial.println("溫度:");
+  Serial.print(kTypeTempOfCelsius());
+  Serial.print("°C / ");
+  Serial.print(kTypeTempOfFah());
+  Serial.println("°F");
 
   // 延遲500毫秒
   delay(500);
@@ -31,6 +33,13 @@ void loop() {
 /**
  * 從k-type取得溫度(°C)
  */
-double kTypeTemp() {
+double kTypeTempOfCelsius() {
   return thermo.readCelsius();
+}
+
+/**
+ * 從k-type取得溫度(°F)
+  */
+double kTypeTempOfFah() {
+  return thermo.readFahrenheit();
 }
